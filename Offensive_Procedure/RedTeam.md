@@ -81,34 +81,36 @@ _TODO: Include vulnerability scan results to prove the identified vulnerabilitie
 _TODO: Fill out the details below. Include screenshots where possible._
 
 The Red Team was able to penetrate `Target 1` and retrieve the following confidential data:
-- Target 1
-- `flag1.txt`: Hash Value:
+### Target 1
+### Flag1.txt: Hash Value:
+
 `flag1{b9bbcb33e11b80be759c4e844862482d}`
 ![Path](Diagrams/Flag1.jpg)
-  - **Exploit Used**
-  - `Information Disclosure Issue`
-    - By right clicking on the web page, I went to: ```View Page Source.```  From here I started to inspect the page and see if anything stood out. I did a search through the various folders and found flag1 in the service.html folder.
 
-- `flag2.txt`: Hash Value:
+**Exploit Used**
+`Information Disclosure Issue`
+  - By right clicking on the web page, I went to: ```View Page Source.```  From here I started to inspect the page and see if anything stood out. I did a search through the various folders and found flag1 in the service.html folder.
+
+### Flag2.txt: Hash Value:
 `flag2{fc3fd58dcdad9ab23faca6e9a36e581c}`
-![Path](Diagrams/Flag2.png)
-  - **Exploit Used**
-  - `Brute Force Attack`
-    - By running a Brute Force Attack against Michael's username we managed to uncover his "secret" password. As noted above, Michael's password turned out to be his name: michael
+
+**Exploit Used**
+`Brute Force Attack`
+  - By running a Brute Force Attack against Michael's username we managed to uncover his "secret" password. As noted above, Michael's password turned out to be his name: michael
+
 ```
 hydra -l michael -P rockyou.txt -s 22 -f -vV 192.168.1.110 ssh
 ```
-
-    - By then doing a ssh into the IP we can successfully log in as Michael: 
+  - By then doing a ssh into the IP we can successfully log in as Michael: 
     
     ```
     ssh michael@192.168.1.110 -p 22
     password: michael
     ```
-    - Now that we are logged in as Michael we can begin the search for the Flag. Since the first flag was labeled with a .txt let's begin our search with that.
+  - Now that we are logged in as Michael we can begin the search for the Flag. Since the first flag was labeled with a .txt let's begin our search with that.
     ```
     locate flag2.txt
     ```
     - As seen in the screenshot - this directs us to the /var/www/ folder where Flag2 is hiding.
 
-      - _TODO: Include the command run_
+![Path](Diagrams/flag2.png)
