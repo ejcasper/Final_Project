@@ -115,5 +115,5 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
     ```
     - As seen in the screenshot - this directs us to the /var/www/ folder where Flag2 is hiding.
 
-![Path](Diagrams/Flag2.png)
+    ![Path](Diagrams/Flag2.png)
 
