@@ -68,8 +68,11 @@ hydra -l michael -P rockyou.txt -s 22 -f -vV 192.168.1.110 ssh
 sudo python -c 'import pty; pty.spawn("/bin/sh")'
 ```
 
+#### Information Disclosure Issues:
+- There can be many different types of Information Disclosure issues in web applications. These can be common mistakes that developers or make that can lead to the discovery of confidential and sensitive information. From Banner Grabbing to File Path Disclosure, attackers can utilize the web page itself to discover "hidden" information. The specific Information Disclosure Vulnerability used for this attack involved "Inappropriate Handling of Sensitive Data." For this I ran a simple, View Page Source, and started analyzing the data. Since I knew specifically what I was looking for I was able to run a find command on each page to gather my information.  
+
 #### Directory Indexing:
-Directory Indexing or Directory Browsing can lead to exposing directory listings on a site that a company may not want you to know about. By examing the source code an attacker could potentially find hidden subfolders. Or by running a dirb command in Kali an attacker could find other hidden files.
+Directory Indexing or Directory Browsing can lead to exposing directory listings on a site that a company may not want you to know about. By running a dirb command in Kali an attacker could find other hidden files.
 
 ![Path](Diagrams/dirb.png)
 
@@ -83,8 +86,8 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
 flag1{b9bbcb33e11b80be759c4e844862482d}
 ![Path](Diagrams/Flag1.jpg)
     - **Exploit Used**
-      - Source Code 
-      - _TODO: Include the command run_
+      - Information Disclosure Issue
+      - These issues 
   - `flag2.txt`: _TODO: Insert `flag2.txt` hash value_
     - **Exploit Used**
       - _TODO: Identify the exploit used_
