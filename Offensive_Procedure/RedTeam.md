@@ -88,20 +88,21 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
 
 ![Path](Diagrams/Flag1.jpg)
 
-**Exploit Used**
+**Exploit Used:**
 `Information Disclosure Issue`
   - By right clicking on the web page, I went to: ```View Page Source.```  From here I started to inspect the page and see if anything stood out. I did a search through the various folders and found flag1 in the service.html folder.
 
 ### Flag2.txt: Hash Value:
 `flag2{fc3fd58dcdad9ab23faca6e9a36e581c}`
 
-**Exploit Used**
+**Exploit Used:**
 `Brute Force Attack`
   - By running a Brute Force Attack against Michael's username we managed to uncover his "secret" password. As noted above, Michael's password turned out to be his name: michael
 
-```
-hydra -l michael -P rockyou.txt -s 22 -f -vV 192.168.1.110 ssh
-```
+    ```
+    hydra -l michael -P rockyou.txt -s 22 -f -vV 192.168.1.110 ssh
+    ```
+
   - By then doing a ssh into the IP we can successfully log in as Michael: 
     
     ```
@@ -114,4 +115,5 @@ hydra -l michael -P rockyou.txt -s 22 -f -vV 192.168.1.110 ssh
     ```
     - As seen in the screenshot - this directs us to the /var/www/ folder where Flag2 is hiding.
 
-![Path](Diagrams/flag2.png)
+![Path](Diagrams/Flag2.png)
+
