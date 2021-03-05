@@ -70,6 +70,7 @@ sudo python -c 'import pty; pty.spawn("/bin/sh")'
 
 #### Directory Indexing:
 Directory Indexing or Directory Browsing can lead to exposing directory listings on a site that a company may not want you to know about. By examing the source code an attacker could potentially find hidden subfolders. Or by running a dirb command in Kali an attacker could find other hidden files.
+
 ![Path](Diagrams/dirb.png)
 
 _TODO: Include vulnerability scan results to prove the identified vulnerabilities._
