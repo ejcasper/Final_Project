@@ -117,3 +117,89 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
 
     ![Path](Diagrams/Flag2.png)
 
+### Flag3.txt: Hash Value:
+`flag3{afc01ab56b50591e7dccf93122770cd2}`
+
+**Exploit Used:**
+`Directory Browsing`
+  - One role of a hacker is to seek out information that maybe a developer or sysadmin forgot to remove. That can involve searching through different directories and files to find clues that will lead to other "secret" information. For the case of Flag3 I did some digging into different directories and files to recover usernames and passwords which then allowed me to access other important databases. Here is how that worked:
+
+  - Since I was already in the /var/www/ folder, logged in as Michael, I decided to navigate deeper to see what other information I could find. This lead me to the `html` folder and then deeper into the `wordpress` folder. 
+
+  ![Path](Diagrams/wordpress_folder.png)
+
+  - Navigating into the `wordpress` folder gave me a lot of options. One of those options was the `wp-config.php` file. I decided to do a `cat command` and see if there was anything useful in this file.
+
+  - I came across some possible useful information and decided to take note of what I found:
+
+  ![Path](Diagrams/mysql_info.png)
+  
+  - Looks like a possible username, password, and hostname for a mysql database.
+
+  - With this information I proceeded to delve deeper to see what other secrets I could discover. By running the following command and using `R@v3nSecurity` as the password I was able to get into the mysql database:
+  ```
+  mysql -h localhost -u root -p
+  ```
+  ![Path](Diagrams/mysql_login.png)
+
+  - Now logged into mysql I could continue my search.  I decided to run the following commands to see what information I could uncover:
+  ```
+  show databases;
+  use wordpress;
+  show tables;
+  ```
+![Path](Diagrams/mysql_database.png)
+
+  - As seen in the screenshot this brought forth a good amount of information. I decided to dig into each folder to see if I could unravel anything new. By running the following command I entered the wp_posts table and immediately found something interesting:  
+  ```
+  select * from wp_posts;
+  ```
+![Path](Diagrams/wp_posts.png)
+
+  - And there we have flag3 (It also uncovered flag4 but let's see if there is another way we could uncover that flag).
+
+### Flag4.txt: Hash Value:
+`flag4{715dea6c055b9fe3337544932f2941ce}`
+
+**Exploit Used:**
+`Spawning a TTY Shell` 
+  - This took a little bit of time to find and conquer but in the end, it was totally worth it. By password cracking Steven's password hash I was able to log in under his username and ultimately gain root access. Any attacker's main objective!
+
+  - Picking up where I left off I continued digging into the mysql table to see what other treasures I could find. This eventually lead me to the wp_users table and brought me to the password hashes of Michael and Steven.
+
+  Commands:
+  ```
+  select * from wp_users;
+  ~This resulted in a bit of a jumbled mess so I scaled the search down:
+  select user_login, user_pass from wp_users;
+  ~This narrowed it down to a nice table
+  ```
+
+  ![Path](Diagrams/mysql-chart-user-hash.jpg)
+
+  
+  - I quickly gathered those hashes, put them into a text file, and ran my John the Ripper to see if they could be cracked. As noted above, John the Ripper came back with a password of `pink84` for Steven.  Without hesitation I jumped back to it and did another ssh into the IP as Steven
+  ```
+  ssh steven@192.168.1.110 -p 22
+  password: pink84
+  ```
+  -  I was now back into the system, logged in under Steven. However, I still had restricted access as to what I could be doing (much like with Michael). Therefore, I ran a python script to spawn a TTY shell and obtain root access. 
+
+  Command:
+  ```
+  sudo python -c 'import pty; pty.spawn("/bin/sh")'
+  ```
+
+  - By obtaining root access I quickly found flag4:
+
+  ![Path](Diagrams/python_script.png)
+  
+  ![Path](Diagrams/Flag4.jpg)
+  
+
+
+
+
+
+
+
