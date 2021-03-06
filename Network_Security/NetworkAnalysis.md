@@ -1,12 +1,12 @@
 # Network Forensic Analysis Report
 
-_TODO_ Complete this report as you complete the Network Activity on Day 3 of class.
-
 ## Time Thieves 
 You must inspect your traffic capture to answer the following questions:
 
 1. What is the domain name of the users' custom site?
-`frank-n-ted.com`
+
+    `frank-n-ted.com`
+
 2. What is the IP address of the Domain Controller (DC) of the AD network?
 
     `10.6.12.12`
