@@ -195,7 +195,7 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
   ![Path](Diagrams/python_script.png)
   
   ![Path](Diagrams/Flag4.jpg)
-  
+
 
 
 
