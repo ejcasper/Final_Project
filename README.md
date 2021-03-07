@@ -7,7 +7,10 @@ For this final project we covered a variety of different concepts. From an offen
 ### Outline:
 Follow the below Outline to gather the process of how everything came together:
 
-- Red Team: Offensive Procedure 
-- Blue Team: Defensive Procedure
-- Network Forensic Analysis: Network Security
+- [Red Team: Offensive Procedure](Offensive_Procedure/RedTeam.md)
+
+- [Blue Team: Defensive Procedure](Defensive_Procedure/BlueTeam.md)
+
+- [Network Forensic Analysis](Network_Security/NetworkAnalysis.md)
+
 - Conclusion??????????
