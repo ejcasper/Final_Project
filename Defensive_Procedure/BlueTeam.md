@@ -43,6 +43,7 @@ Traffic to these services should be carefully monitored. To this end, we have im
 
 #### Name of Alert 1
 Alert 1: `HTTP Errors Alert:`
+
 Implemented as follows:
   - **Metric**: `HTTP Status Errors`
   - **Threshold**: `Above 400 over 1 minute`
@@ -51,6 +52,7 @@ Implemented as follows:
 
 #### Name of Alert 2
 Alert 2: `Failed SSH Password Attempts:`
+
 Implemented as follows:
   - **Metric**: `system.auth.ssh.method`
   - **Threshold**: `Above 5 over the last 5 minutes`
@@ -59,6 +61,7 @@ Implemented as follows:
 
 #### Name of Alert 3
 Alert 3: `Port Scan:`
+
 Implemented as follows:
   - **Metric**: `source.port`
   - **Threshold**: `Above 2000 over the last 5 minutes`
@@ -67,6 +70,7 @@ Implemented as follows:
 
 #### Name of Alert 4
 Alert 3: `Sudo Commands Alert:`
+
 Implemented as follows:
   - **Metric**: `system.auth.sudo.error`
   - **Threshold**: `Above 1 over the last 5 minutes`
@@ -75,6 +79,7 @@ Implemented as follows:
 
   #### Name of Alert 5
 Alert 3: `CPU Usage Monitor:`
+
 Implemented as follows:
   - **Metric**: `system.process.cpu.total`
   - **Threshold**: `Above .5 over the last 5 minutes`
