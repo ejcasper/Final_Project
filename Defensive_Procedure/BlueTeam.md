@@ -94,24 +94,24 @@ _TODO_:
 The logs and alerts generated during the assessment suggest that this network is susceptible to several active threats, identified by the alerts above. In addition to watching for occurrences of such threats, the network should be hardened against them. The Blue Team suggests that IT implement the fixes below to protect the network:
 
 - Vulnerability 1: `Brute Force Attack`
-  - **Patch**: 
+  - **Patch**: `Set up a whitelist of IP addresses or range.` 
   
-  - **Why It Works**: 
+  - **Why It Works**: `This will block any unwanted IP's from trying to login and you are restricting access to only the IP's you know.` 
  
 - Vulnerability 2: `Failed SSH Password/Login Attempts`
-  - **Patch**: 
+  - **Patch**: `Set up key-based logins with ssh-keygen`
 
-  - **Why It Works**: 
+  - **Why It Works**: `This is a much more secure connection and users can have a private key and passphrase.` 
 
 - Vulnerability 3: `Port Scan`
-  - **Patch**: 
+  - **Patch**: `Install a Firewall` and `Internal auditing`  
 
-  - **Why It Works**: 
+  - **Why It Works**: `Firewalls will detect port scans in progress and shut them down. Also, internal audits are always important. These will make sure you are checking your network periodically to make sure you do not have any weak points out in the public.` 
 
 - Vulnerability 4: `Sudo Commands`
-  - **Patch**: 
+  - **Patch**: `Limit access to sudo privileges` and `conduct audits on sudoers folder`
 
-  - **Why It Works**: 
+  - **Why It Works**: `Limiting who has access to run sudo will prevent unnecessary privileges. It is also important to monitor the sudoers folder periodically to ensure users who do not belong do not have access to sudo rights.` 
 
 - Vulnerability 5: `DDos Attack`
   - **Patch**: 
