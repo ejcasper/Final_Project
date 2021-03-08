@@ -23,7 +23,6 @@ You must inspect your traffic capture to answer the following questions:
 
     `This is classified as a Trojan`
 
-
 ---
 
 ## Vulnerable Windows Machine
