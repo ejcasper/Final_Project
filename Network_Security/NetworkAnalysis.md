@@ -45,7 +45,7 @@ You must inspect your traffic capture to answer the following questions:
 
 4. As a bonus, retrieve the desktop background of the Windows host.
 
-![Path](Diagrams/Desktop_Image.png)
+![Path](Diagrams/desktop_image.png)
 
 
 ---
