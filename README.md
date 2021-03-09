@@ -5,8 +5,9 @@ For the past 24 weeks I have learned more about Cybersecurity than ever before! 
 For this final project we covered a variety of different concepts. From an offensive mind we attacked a target machine. Then with a Security Engineering focus we had alerts set and ready for an attacker's presence. Finally, we also looked at live traffic on the wire to detect any abnormalities with illegal downloads or suspicious activity.
 
 
-### Diagram:
+### Network Topology:
 
+![Path](Offensive_Procedure/Diagrams/Topology.png)
 
 ### Outline:
 Follow the below Outline to gather the process of how everything came together:
