@@ -6,7 +6,6 @@
 - Exploitation
 
 ### Exposed Services
-_TODO: Fill out the information below._
 
 Nmap scan results for each machine reveal the below services and OS details:
 
@@ -39,10 +38,8 @@ Port 111 allows attackers to see what services are running. This can be used for
 These ports allow for network file sharing. Also allow the potential of a possible reverse shell via Metasploit. 
 
 
-
-_TODO: Fill out the list below. Include severity, and CVE numbers, if possible._
-
 The following vulnerabilities were identified on each target:
+
 ### Target 1
 #### WP Scan
 - By knowing that Raven Security is running Wordpress I ran a wpscan to enumerate the version and its users. By gaining this information I could see if their version of word press is vulnerable to attacks as well as gain user information. 
@@ -76,9 +73,8 @@ Directory Indexing or Directory Browsing can lead to exposing directory listings
 
 ![Path](Diagrams/dirb.png)
 
-_TODO: Include vulnerability scan results to prove the identified vulnerabilities._
-### Exploitation
-_TODO: Fill out the details below. Include screenshots where possible._
+
+### Exploitation:
 
 The Red Team was able to penetrate `Target 1` and retrieve the following confidential data:
 ### Target 1
