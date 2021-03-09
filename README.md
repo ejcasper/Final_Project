@@ -18,4 +18,4 @@ Follow the below Outline to gather the process of how everything came together:
 
 - [Network Forensic Analysis](Network_Security/NetworkAnalysis.md)
 
-- [Group Slide Presentation](website link)
+- [Group Slide Presentation](https://docs.google.com/presentation/d/1PwSpw4a5VeBZH5oRQPGi4Ud8vcaPZZ5-NOOHpmbjROA/edit?usp=sharing)
