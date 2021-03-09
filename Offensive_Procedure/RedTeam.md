@@ -182,6 +182,7 @@ The Red Team was able to penetrate `Target 1` and retrieve the following confide
   -  I was now back into the system, logged in under Steven. However, I still had restricted access as to what I could be doing (much like with Michael). Therefore, I ran a python script to spawn a TTY shell and obtain root access. 
 
   Command:
+  
   ```
   sudo python -c 'import pty; pty.spawn("/bin/sh")'
   ```
